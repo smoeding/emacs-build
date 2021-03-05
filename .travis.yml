@@ -6,7 +6,7 @@ language: minimal
 addons:
   apt:
     sources:
-      - ppa:kelleyk/emacs
+      - sourceline: 'ppa:kelleyk/emacs'
 env:
   - EMACS=emacs25
   - EMACS=emacs26
