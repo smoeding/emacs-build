@@ -1,0 +1,9 @@
+# .travis.yml ---
+---
+os: linux
+dist: bionic
+language: generic
+script:
+  - echo OK
+notifications:
+  email: false
