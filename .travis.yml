@@ -13,7 +13,7 @@ env:
   - EMACS_VERSION=emacs27
 before_install:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS_VERSION-nox
-  - sudo update-alternatives --set emacs /usr/bin/$EMACS_VERSION 1
+  - sudo update-alternatives --set emacs /usr/bin/$EMACS_VERSION
   - git clone -q https://github.com/cask/cask ~/.cask
   - PATH=$HOME/.cask/bin:$PATH
 install:
