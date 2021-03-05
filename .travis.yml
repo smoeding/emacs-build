@@ -3,7 +3,15 @@
 os: linux
 dist: bionic
 language: generic
+addons:
+  apt:
+    sources:
+      - ppa:kelleyk/emacs
+env:
+  - EMACS=emacs25
+  - EMACS=emacs26
+  - EMACS=emacs27
 script:
-  - echo OK
+  - echo OK (${EMACS})
 notifications:
   email: false
