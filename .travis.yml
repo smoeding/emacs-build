@@ -12,9 +12,8 @@ env:
   - EMACS=emacs26-nox
   - EMACS=emacs27-nox
 before_script:
-  - sudo apt-get -yq purge emacs
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS
 script:
-  - emacs --version
+  - $EMACS --version
 notifications:
   email: false
