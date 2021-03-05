@@ -10,9 +10,9 @@ addons:
     packages:
       - $EMACS
 env:
-  - EMACS=emacs25
-  - EMACS=emacs26
-  - EMACS=emacs27
+  - EMACS=emacs25-nox_25.3
+  - EMACS=emacs26-nox_26.3
+  - EMACS=emacs27-nox_27.1
 script:
   - echo $EMACS
 notifications:
