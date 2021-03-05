@@ -2,7 +2,7 @@
 ---
 os: linux
 dist: bionic
-language: generic
+language: minimal
 addons:
   apt:
     sources:
@@ -12,6 +12,6 @@ env:
   - EMACS=emacs26
   - EMACS=emacs27
 script:
-  - echo OK (${EMACS})
+  - echo $EMACS
 notifications:
   email: false
