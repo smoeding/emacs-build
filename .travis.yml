@@ -8,9 +8,9 @@ addons:
     sources:
       - sourceline: 'ppa:kelleyk/emacs'
 env:
-  - EMACS=emacs25-nox
-  - EMACS=emacs26-nox
-  - EMACS=emacs27-nox
+  - EMACS=emacs25
+  - EMACS=emacs26
+  - EMACS=emacs27
 before_script:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS
 script:
