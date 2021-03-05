@@ -12,7 +12,7 @@ env:
   - EMACS=emacs26
   - EMACS=emacs27
 before_script:
-  - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS
+  - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS-nox
 script:
   - $EMACS --version
 notifications:
