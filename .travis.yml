@@ -17,10 +17,11 @@ before_install:
   - git clone -q https://github.com/cask/cask ~/.cask
   - ln -s /usr/bin/python3 $HOME/.cask/bin/python
   - PATH=$HOME/.cask/bin:$PATH
+  - emacs --version
 install:
+  - cask list
   - cask install
 script:
-  - emacs --version
   - make compile test
 notifications:
   email: false
