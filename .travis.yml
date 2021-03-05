@@ -8,17 +8,18 @@ addons:
     sources:
       - sourceline: 'ppa:kelleyk/emacs'
 env:
-  - EMACS=emacs25
-  - EMACS=emacs26
-  - EMACS=emacs27
-before_script:
-  - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS-nox
-  - sudo ln -svf /usr/bin/$EMACS /usr/bin/emacs
+  - EMACS_VERSION=emacs25
+  - EMACS_VERSION=emacs26
+  - EMACS_VERSION=emacs27
+before_install:
+  - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS_VERSION-nox
+  - sudo ln -svf /usr/bin/$EMACS_VERSION /usr/bin/emacs
   - git clone -q https://github.com/cask/cask ~/.cask
   - PATH=$HOME/.cask/bin:$PATH
+install:
+  - cask install
 script:
-  - $EMACS --version
   - emacs --version
-  - which cask
+  - make compile test
 notifications:
   email: false
