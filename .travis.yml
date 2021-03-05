@@ -13,7 +13,7 @@ env:
   - EMACS=emacs27
 before_script:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS-nox
-  - ln -svf /usr/bin/$EMACS /usr/bin/emacs
+  - sudo ln -svf /usr/bin/$EMACS /usr/bin/emacs
   - git clone -q https://github.com/cask/cask ~/.cask
   - PATH=$HOME/.cask/bin:$PATH
 script:
