@@ -13,12 +13,12 @@ env:
   - EMACS=emacs27
 before_script:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS-nox
-  - which emacs
-  - which $EMACS
+  - ln -svf /usr/bin/$EMACS /usr/bin/emacs
   - git clone -q https://github.com/cask/cask ~/.cask
-  - echo 'PATH=$HOME/.cask/bin:$PATH' >> ~/.bashrc
+  - PATH=$HOME/.cask/bin:$PATH
 script:
   - $EMACS --version
+  - emacs --version
   - which cask
 notifications:
   email: false
