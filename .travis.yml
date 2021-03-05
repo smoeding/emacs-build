@@ -7,8 +7,6 @@ addons:
   apt:
     sources:
       - sourceline: 'ppa:kelleyk/emacs'
-    packages:
-      - $EMACS
 env:
   - EMACS=emacs25-nox
   - EMACS=emacs26-nox
@@ -16,6 +14,6 @@ env:
 before_script:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS
 script:
-  - echo $EMACS
+  - emacs --version
 notifications:
   email: false
