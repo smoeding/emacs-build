@@ -10,9 +10,9 @@ addons:
     packages:
       - $EMACS
 env:
-  - EMACS=emacs25-nox_25.3
-  - EMACS=emacs26-nox_26.3
-  - EMACS=emacs27-nox_27.1
+  - EMACS=emacs25-nox
+  - EMACS=emacs26-nox
+  - EMACS=emacs27-nox
 before_script:
   - sudo apt-get -yq --no-install-suggests --no-install-recommends install $EMACS
 script:
